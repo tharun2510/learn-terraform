@@ -53,5 +53,5 @@ variable sample_dict {
 }
 
 output sample_dict {
-  value=var.sample_dict
+  value = var.sample_dict[a]
 }
