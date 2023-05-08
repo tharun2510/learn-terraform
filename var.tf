@@ -44,3 +44,14 @@ variable num {
 output num1 {
   value = var.num
 }
+
+variable sample_dict {
+  default={
+    a=1000
+    b="dict"
+  }
+}
+
+output sample_dict {
+  value=var.sample_dict
+}
