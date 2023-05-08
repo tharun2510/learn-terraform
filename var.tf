@@ -25,10 +25,14 @@ variable "sample_list" {
     100,
     true,
     200,
-    "hello world",
+    "hello world"
   ]
 }
 
 output "sample_list" {
   value=var.sample_list
+}
+
+output "sample_list1" {
+  value =var.sample_list[2]
 }
