@@ -25,7 +25,8 @@ variable "sample_list" {
     100,
     true,
     200,
-    "hello world"
+    "hello world",
+    kumar
   ]
 }
 
