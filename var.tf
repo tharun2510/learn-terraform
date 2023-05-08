@@ -38,7 +38,7 @@ output "sample_list1" {
 }
 
 variable num {
-  default=1
+  default=hello
 }
 
 output num1 {
