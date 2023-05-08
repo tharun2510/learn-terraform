@@ -18,3 +18,18 @@ variable "sample_boolean"{
 output "boolean" {
   value = var.sample_boolean
 }
+
+
+variable "sample_list" {
+  default=[
+    100
+    true
+    200
+    "hello world"
+    kumar
+  ]
+}
+
+output "sample_list" {
+  value=var.sample_list
+}
