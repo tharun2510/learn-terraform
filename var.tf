@@ -22,11 +22,10 @@ output "boolean" {
 
 variable "sample_list" {
   default=[
-    100
-    true
-    200
-    "hello world"
-    kumar
+    100,
+    true,
+    200,
+    "hello world",
   ]
 }
 
