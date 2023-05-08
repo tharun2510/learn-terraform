@@ -26,7 +26,6 @@ variable "sample_list" {
     true,
     200,
     "hello world",
-    kumar
   ]
 }
 
@@ -36,4 +35,12 @@ output "sample_list" {
 
 output "sample_list1" {
   value =var.sample_list[2]
+}
+
+variable num {
+  default=1
+}
+
+output num1 {
+  value = var.num
 }
