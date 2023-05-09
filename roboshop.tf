@@ -21,3 +21,12 @@ data "aws_ami" "devops_practice_ami" {
 output  "frontend_ami" {
   value = data.aws_ami.devops_practice_ami.image_id
 }
+
+
+resource "aws_route53_record" "frontend_dns" {
+    zone_id = Z0542401RTZBLNQX3LCC
+    name    = "frontend-dev.devops2510.online"
+    type    = "A"
+    ttl     = 30
+    records = [aws_instance.frontend.public_ip]
+  }
