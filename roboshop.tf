@@ -5,6 +5,6 @@ data "aws_ami" "example" {
 }
 
 
-output  "data" {
+output  "data1" {
   value = data.aws_ami.example.id
 }
