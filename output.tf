@@ -27,3 +27,12 @@ output num1 {
 output sample_dict {
   value = var.sample_dict["b"]
 }
+
+output  "env" {
+  value = var.env
+}
+
+
+output "auto"  {
+  value=  var.auto
+}
