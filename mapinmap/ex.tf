@@ -37,7 +37,7 @@ name          = "rabbitmq"
 instance_type = "t3.micro"
 }
 payment = {
-name          = "payment"
+name          = "payme"
 instance_type = "t3.micro"
 }
 }
