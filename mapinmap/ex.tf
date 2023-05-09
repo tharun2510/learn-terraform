@@ -45,8 +45,8 @@ instance_type = "t3.micro"
 
 
 variable a {
-  b=1
-  c=2
+  count=1
+  bound=2
 }
 
 
@@ -55,5 +55,5 @@ output "babyyyyyyyyyyyyyy" {
 }
 
 output "d" {
-  value = var.a.b
+  value = var.a.count
 }
