@@ -43,6 +43,17 @@ instance_type = "t3.micro"
 }
 }
 
+
+variable a {
+  b=1
+  c=2
+}
+
+
 output "babyyyyyyyyyyyyyy" {
   value = var.components.payment.name
+}
+
+output "d" {
+  value = var.a.b
 }
