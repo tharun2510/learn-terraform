@@ -44,5 +44,5 @@ instance_type = "t3.micro"
 }
 
 output "babyyyyyyyyyyyyyy" {
-  value = var.components
+  value = var.components.payment["name"]
 }
