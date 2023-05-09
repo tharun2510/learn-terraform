@@ -57,5 +57,5 @@ output "babyyyyyyyyyyyyyy" {
 }
 
 output "d" {
-  value = var.a.count
+  value = var.a["count"]
 }
