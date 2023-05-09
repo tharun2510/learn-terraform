@@ -24,7 +24,7 @@ output  "frontend_ami" {
 
 
 resource "aws_route53_record" "frontend_dns" {
-    zone_id = Z0542401RTZBLNQX3LCC
+    zone_id = "Z0542401RTZBLNQX3LCC"
     name    = "frontend-dev.devops2510.online"
     type    = "A"
     ttl     = 30
