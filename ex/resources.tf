@@ -20,3 +20,7 @@ data "aws_ami" "devops_practice_ami" {
 data "aws_security_group" "test" {
   name   = "allow-all"
 }
+
+output "disp" {
+  value=aws_instance.frontend.ami
+}
