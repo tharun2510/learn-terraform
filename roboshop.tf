@@ -1,10 +1,12 @@
-data "aws_ami" "example" {
-  most_recent      = true
-  name_regex       = "Centos-8-DevOps-Practice"
-  owners           = ["111545089137"]
+resource "aws_instance" "frontend" {
+  ami           = "ami-0bb6af715826253bf"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "frontend"
+  }
 }
 
 
-output  "data1" {
-  value = data.aws_ami.example.image_id
-}
+
+
