@@ -25,7 +25,7 @@ resource "aws_route53_record" "frontend_dns" {
 resource "aws_instance" "frontend" {
   ami           = data.aws_ami.devops_practice_ami.image_id
   instance_type = "t3.micro"
-  vpc_security_group_ids  = [ data.aws_security_group.test.id]
+  vpc_security_group_ids  = [data.aws_security_group.test.id]
   tags = {
     Name = "frontend"
 
