@@ -45,8 +45,10 @@ instance_type = "t3.micro"
 
 
 variable a {
-  count=1
-  bound=2
+  default= {
+    count = 1
+    bound = 2
+  }
 }
 
 
