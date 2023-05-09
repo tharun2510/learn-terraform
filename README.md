@@ -1,1 +1,0 @@
-# learn-terraform-yes-no
