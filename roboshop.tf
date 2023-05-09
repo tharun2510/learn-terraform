@@ -1,5 +1,5 @@
 resource "aws_instance" "frontend" {
-  ami           = "ami-0bb6af715826253bf"
+  ami           = data.aws_ami.devops_practice_ami.image_id
   instance_type = "t3.micro"
 
   tags = {
