@@ -8,5 +8,8 @@ resource "aws_instance" "frontend" {
 }
 
 
+output "frontend_pulic_ip" {
+  value=aws_instance.frontend.public_ip
+}
 
 
