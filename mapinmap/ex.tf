@@ -53,7 +53,7 @@ variable a {
 
 
 output "babyyyyyyyyyyyyyy" {
-  value = var.components["payment"]
+  value = var.components[payment["name"]]
 }
 
 output "d" {
