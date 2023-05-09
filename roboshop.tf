@@ -4,6 +4,7 @@ resource "aws_instance" "frontend" {
 
   tags = {
     Name = "frontend"
+
   }
 }
 
@@ -19,6 +20,6 @@ data "aws_ami" "devops_practice_ami" {
 }
 
 
-output "aws_ami" "frontend_ami" {
+output  "frontend_ami" {
   value = data.aws_ami.devops_practice_ami.image_id
 }
