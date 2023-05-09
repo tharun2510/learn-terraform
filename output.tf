@@ -36,3 +36,7 @@ output  "env" {
 output "auto"  {
   value=  var.auto
 }
+
+output "ter"  {
+  value=  var.ter
+}
