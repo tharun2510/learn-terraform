@@ -1,4 +1,4 @@
-data "aws_instance" "foo" {
+data "aws_instances" "foo" {
 }
 
 #output "workstation_des" {
