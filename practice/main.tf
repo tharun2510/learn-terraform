@@ -1,5 +1,4 @@
-data "aws_security_group" "sg" {
-  name   = "allow-all"
+data "aws_security_groups" "sg" {
 }
 
 
