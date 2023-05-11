@@ -7,7 +7,6 @@ variable "abc" {
 }
 
 variable "env" {}
-env=3
 
 
 
