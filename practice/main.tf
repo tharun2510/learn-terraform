@@ -1,9 +1,18 @@
-resource "aws_instance" "frontend" {
+variable "abc" {
+  default={
+    a=frontend
+    b=backend
+    c=middleware
+  }
+}
+
+resource "aws_instance" "instances" {
+  count=length(var.abc)
   ami           = data.aws_ami.example.image_id
   instance_type = "t3.micro"
 
   tags = {
-    Name = "frontend"
+    Name = var.abc[count.index]
   }
 }
 
