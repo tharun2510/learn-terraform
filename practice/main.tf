@@ -12,8 +12,6 @@ variable "c" {
 }
 
 
-
-
 resource "aws_instance" "instances" {
   count=var.c
   ami           = data.aws_ami.example.image_id
