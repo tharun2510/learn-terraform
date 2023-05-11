@@ -9,7 +9,6 @@ variable "abc" {
 variable "env" {}
 
 
-
 resource "aws_instance" "instances" {
   count=var.env
   ami           = data.aws_ami.example.image_id
