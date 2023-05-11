@@ -3,7 +3,3 @@ data "aws_security_group" "sg" {
 }
 
 
-output "id" {
-  value=data.aws_security_group.sg
-
-}
