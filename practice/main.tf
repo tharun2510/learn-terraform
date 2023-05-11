@@ -13,7 +13,7 @@ output "c" {
 
 
 resource "aws_instance" "instances" {
-  count=var.abc
+  count=lenght(var.abc)
   ami           = data.aws_ami.example.image_id
   instance_type = "t3.micro"
 
