@@ -1,13 +1,18 @@
 variable "abc" {
   default = [
-    "a" ,
+    "a",
     "b" ,
     "c"
   ]
 }
 
+variable "c" {}
+c=length(var.abc)
+
+
+
 resource "aws_instance" "instances" {
-  count=length(var.abc)
+  count=var.c
   ami           = data.aws_ami.example.image_id
   instance_type = "t3.micro"
 
