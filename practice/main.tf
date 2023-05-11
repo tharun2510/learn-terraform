@@ -8,5 +8,6 @@ data "aws_ami" "example" {
 }
 
 output "id" {
-  value=data.aws_ami.example.image_id
+  value=data.aws_ami.example.arn
+
 }
