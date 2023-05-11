@@ -1,8 +1,8 @@
 variable "abc" {
-  default={
-    a=frontend
-    b=backend
-    c=middleware
+  default = {
+    a = "frontend"
+    b = "backend"
+    c = "middleware"
   }
 }
 
