@@ -20,7 +20,7 @@ resource "aws_instance" "instances" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = each_key
+    Name = each.key
   }
 }
 
