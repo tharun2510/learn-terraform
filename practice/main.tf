@@ -1,9 +1,9 @@
 variable "abc" {
-  default = {
-    a = "frontend"
-    b = "backend"
-    c = "middleware"
-  }
+  default = [
+    "a" ,
+    "b" ,
+    "c"
+  ]
 }
 
 resource "aws_instance" "instances" {
