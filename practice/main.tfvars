@@ -1,1 +1,1 @@
-env=var.abc
+env=length(var.abc)
