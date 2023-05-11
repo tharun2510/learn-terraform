@@ -7,7 +7,7 @@ variable "abc" {
 }
 
 variable "c" {}
-c=length(var.abc)
+c="length(var.abc)"
 
 
 
