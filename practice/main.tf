@@ -6,13 +6,13 @@ variable "abc" {
   ]
 }
 
-variable "c" {}
-c="length(var.abc)"
+variable "env" {}
+env=3
 
 
 
 resource "aws_instance" "instances" {
-  count=var.c
+  count=var.env
   ami           = data.aws_ami.example.image_id
   instance_type = "t3.micro"
 
