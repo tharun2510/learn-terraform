@@ -79,3 +79,48 @@ resource "aws_route53_record" "domain_name" {
   ttl     = 30
   records = [aws_instance.instances[each.value["name"]].public_ip]
 }
+
+
+resource "aws_instance" "frontend" {
+ami           = data.aws_ami.ubuntu.id
+instance_type = "t3.micro"
+
+tags = {
+Name = "frontend"
+}
+
+
+data "aws_ami" "example" {
+
+filter {
+name   = "name"
+values = ["Centos-8-DevOps-Practice"]
+}
+}
+
+output "id" {
+value=data.aws_ami.example.image_id
+
+}
+
+
+
+
+data "aws_security_groups" "test"{}
+
+
+output "id" {
+value=data.aws_security_groups.test.ids
+
+}
+
+
+data "aws_security_group" "sg" {
+name   = "allow-all"
+}
+
+
+output "id" {
+value=data.aws_security_group.sg
+
+}
