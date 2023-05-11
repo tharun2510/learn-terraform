@@ -1,24 +1,26 @@
-variable "abc" {
-  default = [
-    "a",
-    "b" ,
-    "c"
-  ]
+variable "components" {
+  default = {
+    frontend = {
+      name = "frontend"
+    }
+    backend = {
+      name = "backend"
+    }
+    middleware = {
+      name = "middleware"
+    }
+  }
 }
 
-
-output "c" {
-  value=length(var.abc)
-}
 
 
 resource "aws_instance" "instances" {
-  count=length(var.abc)
+  for_each=var.components
   ami           = data.aws_ami.example.image_id
   instance_type = "t3.micro"
 
   tags = {
-    Name = var.abc[count.index]
+    Name = each_key
   }
 }
 
