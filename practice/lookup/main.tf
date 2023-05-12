@@ -14,10 +14,10 @@ variable "components" {
 
 
 
-resource "null_resource" "null" {
 
-  for_each =var.components
 
-    a= lookup(each.key , "pasword", "null")
+output "sample" {
+
+    value = lookup(var.components.frontend , "pasword", "null")
   }
 
