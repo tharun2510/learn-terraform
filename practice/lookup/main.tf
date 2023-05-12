@@ -23,6 +23,6 @@ variable "fruit" {
 resource "null_resource" "null" {
   for_each =var.components
   provisioner "local-exec" {
-    command="echo  tarun is good ${each.key} "
+    command="echo  tarun is good ${each.key}----${each.value} "
   }
 }
