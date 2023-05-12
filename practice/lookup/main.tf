@@ -20,15 +20,9 @@ variable "fruit" {
 }
 
 
-output "c" {
-  value = lookup(var.fruit , "c", "null")
-}
-
-
-
-
-output "sample" {
-
-    value = lookup(var.components.backend , "password", "null")
+resource "null_resource" "null" {
+  for_each =var.components
+  provisioner "local-exec" {
+    commands="echo  tarun is good ${each.key} "
   }
-
+}
