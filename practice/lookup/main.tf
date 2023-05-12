@@ -18,6 +18,6 @@ variable "components" {
 
 output "sample" {
 
-    value = lookup(var.components , "password", "null")
+    value = lookup(var.components.frontend , "password", "null")
   }
 
