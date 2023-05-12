@@ -14,5 +14,5 @@ variable "components" {
 
 
 output "sample" {
-  value = nslookup (var.components,"pasword","null")
+  value = lookup (var.components,"pasword","null")
 }
