@@ -17,6 +17,7 @@ variable "components" {
 
 
 output "sample" {
+
   for_each =var.components
   value = lookup(each.key , "pasword", "null")
   }
