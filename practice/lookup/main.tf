@@ -12,6 +12,17 @@ variable "components" {
 }
 }
 
+variable "fruit" {
+  default={
+    a=10
+    b=20
+  }
+}
+
+
+output "c" {
+  value = lookup(var.fruit , "c", "null")
+}
 
 
 
