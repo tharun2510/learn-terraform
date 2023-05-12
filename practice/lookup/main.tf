@@ -23,7 +23,7 @@ variable "fruit" {
 resource "null_resource" "null" {
   for_each =var.components
   provisioner "local-exec" {
-    command="echo  tarun is good ${lookup(each.key,"password","null")}"
+    command="echo  tarun is good ${lookup(each.value,"password","null")}"
   }
 }
 
