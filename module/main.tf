@@ -1,4 +1,8 @@
 module "mod1" {
   source = "./mod1"
-  input  = "xyz"
+  input  = module.mod2.out
+}
+
+module "mod2"  {
+  source = "./mod2"
 }
